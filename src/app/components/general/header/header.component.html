@@ -1,0 +1,43 @@
+<nav>
+    <div class="container">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <button ngbNavLink>About me</button>
+    <ng-template ngbNavContent>
+   
+    </ng-template>
+    
+  </li>
+  
+  <li [ngbNavItem]="2">
+    <button ngbNavLink>Experience</button>
+    <ng-template ngbNavContent>
+    </ng-template>
+    </li>
+  
+    <li [ngbNavItem]="3">
+      <button ngbNavLink>Projects</button>
+      <ng-template ngbNavContent>
+      </ng-template>
+      </li>
+  
+      <li [ngbNavItem]="4"> 
+        <button ngbNavLink>Contact</button>
+        <ng-template ngbNavContent>
+        </ng-template>
+        </li>
+  
+        <li ngbNavItem> 
+          <a ngbNavLink (click)="downloadCV()">Resume</a>
+          </li>
+        
+   </ul>
+   
+  
+    
+  
+   <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  
+    </div>
+  </nav>
+   
