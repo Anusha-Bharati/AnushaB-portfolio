@@ -5,21 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/general/header/header.component';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './components/general/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    NgbNavModule
+    NgbNavModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports:[HeaderComponent]
+  exports:[HeaderComponent,FooterComponent]
 })
 export class AppModule { }
