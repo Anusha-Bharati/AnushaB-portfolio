@@ -16,3 +16,23 @@
       }
 
     }}
+    .cv-btn{
+        padding: 20px 40px !important;
+      }
+      .nav-link {
+          padding: 20px 40px;
+          color: white;
+          margin: 0px;
+          font-size: 15px;
+          &:hover {
+              color: $Green;
+          }
+      }
+      .nav-number {
+          color: $Green;
+          font-size: 12px;
+      }
+      .nav-text{
+        color: $LightestSlate !important;
+        padding-bottom: 4px;
+      }
