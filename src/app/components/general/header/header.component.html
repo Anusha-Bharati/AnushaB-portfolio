@@ -1,15 +1,16 @@
-<nav [@animateMenu] class="navbar main-navbar on-top" >
+<nav class="navbar main-navbar on-top" >
     <div class="container">
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="menu-ul">
   <li [ngbNavItem]="1">
     <button ngbNavLink>About me</button>
     <ng-template ngbNavContent>
+        <div>
    <p>Software Engineer with 4 years of expertise in crafting scalable applications using Angular,
-     TypeScript, Python, JavaScript, ASP.NET, and MS-SQL.</p> 
-     <p>
-        Adept at optimising user experience, application performance, and collaborating seamlessly with 
-        cross- functional teams to deliver high-caliber software solutions.
+     TypeScript, Python, JavaScript, ASP.NET, and MS-SQL.
+     Adept at optimising user experience, application performance, and collaborating seamlessly with cross- functional teams to deliver high-caliber software solutions. Excels in translating intricate business requirements into technical specifications while consistently achieving project goals and elevating customer satisfaction. A champion of innovative thinking, continually challenging boundaries and striving for excellence in every endeavour. Committed to pushing the limits of software engineering through a relentless pursuit of knowledge and cutting- edge practices.
+
      </p> 
+    </div>
   
 </ng-template>
     
@@ -18,6 +19,14 @@
   <li [ngbNavItem]="2">
     <button ngbNavLink>Experience</button>
     <ng-template ngbNavContent>
+        <section>
+            <div>
+            <ul>
+                Dec 2022 - Current                 Software Developer 
+            </ul>
+
+            </div>
+        </section>
     </ng-template>
     </li>
   
@@ -43,4 +52,4 @@
 
  <div [ngbNavOutlet]="nav" class="mt-2"></div> 
 
-   <pre>Active: {{ active }}</pre>
+
