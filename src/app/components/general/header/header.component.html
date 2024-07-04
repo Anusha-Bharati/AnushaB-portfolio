@@ -2,15 +2,13 @@
     <div class="container">
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="menu-ul">
   <li [ngbNavItem]="1">
-    <button ngbNavLink>About me</button>
+    <a ngbNavLink (click)='scroll("about")'>About me</a>
     <ng-template ngbNavContent>
-        <div>
-   <p>Software Engineer with 4 years of expertise in crafting scalable applications using Angular,
-     TypeScript, Python, JavaScript, ASP.NET, and MS-SQL.
-     Adept at optimising user experience, application performance, and collaborating seamlessly with cross- functional teams to deliver high-caliber software solutions. Excels in translating intricate business requirements into technical specifications while consistently achieving project goals and elevating customer satisfaction. A champion of innovative thinking, continually challenging boundaries and striving for excellence in every endeavour. Committed to pushing the limits of software engineering through a relentless pursuit of knowledge and cutting- edge practices.
-
-     </p> 
-    </div>
+        <section class="section about" id="about">
+            <h3 class="section-title">
+                <span class='n-section-title'></span> {{"AboutMe.Title"}}
+            </h3>
+    </section>
   
 </ng-template>
     
@@ -18,18 +16,34 @@
   
   <li [ngbNavItem]="2">
     <button ngbNavLink>Experience</button>
-    <ng-template ngbNavContent>
-        <section>
-            <div>
-        
-                Dec 2022 - Current      <br>   Software Developer 
-                <p>
-  Spearheaded development of cutting-edge billing portal, accounting application designed to automate and streamline invoices, fixed charges and tariffs processing.
-• Revamped billing portal by refactoring legacy code, leveraging modern design and optimisation techniques for elevated user experience by enhancing product value, delivering intuitive, highly responsive portal tailored to target audience needs and complex business logic requirements.
-• Proficient in full-stack web development, employing Angular 14, GraphQL, ASP.NET, HTML, CSS, and Bootstrap for creating visually appealing and highly functional user interfaces.
-• Developed robust APIs and implemented backend functionalities using C#, GraphQL, ASP.NET Entity Framework, and SQL, ensuring seamless data integration and application performance.
-                </p>
-
+    <ng-template ngbNavContent styel="background: #0a192f;">
+        <section >
+            <div >
+                    <p-timeline [value]="experience" styleClass="customized-timeline" align="left" >
+                        <ng-template  pTemplate="marker" let-event>
+                            <span 
+                            class="flex w-2rem h-2rem align-items-center justify-content-center text-white 
+                            border-circle z-1 shadow-1 border-color: black;">
+                            <img 
+                            *ngIf="event.image" 
+                            [src]="'/assets/' + event.image"
+                            [alt]="event.name"
+                            width="200" 
+                            class="shadow-2" />
+                        </span>
+                        </ng-template>
+                        <ng-template pTemplate="content" let-event>
+                            <p-card [header]="event.status" 
+                            [subheader]="event.date" data-aos="fade-up" data-aos-duration="1000">
+                                {{event.descr}}
+                                <br>
+                                <button mat-raised-button style="width:100px; height: 40px;"> {{event.button}}</button>
+                            </p-card>
+                            <br>
+                            <br>
+                            <br>    
+                        </ng-template>
+                    </p-timeline>
             </div>
         </section>
     </ng-template>
