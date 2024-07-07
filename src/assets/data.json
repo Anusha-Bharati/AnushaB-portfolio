@@ -1,21 +1,24 @@
+[{
+    "AboutMe": "About Me",
+    "Experience" : "Experience",
+    "Projects" : "Projects",
+    "Contact" : "Contact",
+    "Resume" : "Resume",
+    "cvName": "cv.pdf"
+},
 {
-    "Header.Item1": "About Me",
-    "Header.Item2" : "Experience",
-    "Header.Item3" : "Projects",
-    "Header.Item4" : "Contact",
-    "Header.cvBtn" : "Resume",
-    "Header.cvName": "cv.pdf",
-
-    "Banner.Pretitle": "Hello! My name is",
-    "Banner.Description": "I have <span class='underline'>4 years of experience</span>. Code in <span class='underline'>Angular</span>",
-    "Banner.ActionBtn": "Get in touch",
-
-    "AboutMe.Title": "About me",
-    "AboutMe.Paragraphs": [
+    "Pretitle": "Hello! My name is",
+    "AboutMeDescr": "I have 4 years of experience</span>",
+    "ActionBtn": "Get in touch"
+},{
+    "Title": "About me",
+    "AboutMeDescr2": [
         "Software Engineer with 4 years of expertise in crafting scalable applications using Angular, TypeScript, Python, JavaScript, ASP.NET, and MS-SQL. Adept at optimising user experience, application performance, and collaborating seamlessly with cross- functional teams to deliver high-caliber software solutions. Excels in translating intricate business requirements into technical specifications while consistently achieving project goals and elevating customer satisfaction. A champion of innovative thinking, continually challenging boundaries and striving for excellence in every endeavour. Committed to pushing the limits of software engineering through a relentless pursuit of knowledge and cutting- edge practices."
-    ],
-    "Experience.Title": "Experience",
-    "Experience.Jobs": [
+    ]
+},
+{
+    "ExpTitle": "Experience",
+    "Jobs": [
         {
             "Title": "Software developer",
             "Date": "Dec 2022- Present",
@@ -25,3 +28,4 @@
             ]
       }]
 }
+]

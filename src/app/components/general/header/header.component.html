@@ -2,12 +2,12 @@
     <div class="container">
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="menu-ul">
   <li [ngbNavItem]="1">
-    <a ngbNavLink (click)='scroll("about")'>About me</a>
+    <a ngbNavLink (click)='scroll("about")' *ngFor="let text of data" class="section-title">{{text.AboutMe}}</a>
     <ng-template ngbNavContent>
         <section class="section about" id="about">
-            <h3 class="section-title">
-                <span class='n-section-title'></span> {{"AboutMe.Title"}}
-            </h3>
+            <div class="about-title"  *ngFor="let text of data" data-aos="fade-up" data-aos-duration="3000">
+           {{text.AboutMeDescr2}}
+        </div>
     </section>
   
 </ng-template>

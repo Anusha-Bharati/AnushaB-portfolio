@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -12,11 +13,20 @@ export class HeaderComponent implements OnInit{
   experience : any[]=[];
   responsiveMenuVisible =false;
   pageYPosition: number;
+  data: any ;
+  url : string = '../../../../assets/data.json';
 
-  constructor( private router: Router,){
+  constructor( private router: Router,
+    private httpClient: HttpClient
+  ){
   }
 
   ngOnInit(){
+
+    this.httpClient.get(this.url).subscribe(res => {
+      this.data = res;
+      console.log(this.data[0])
+    });
     this.experience = [
       {status: 'Software Developer', date: 'Dec 2022- Present', icon: 'AB', image:'eve.jpeg', name:'Eve Networks', button:'TypeScript',
         descr: 'Spearheaded development of cutting-edge billing portal, accounting application designed to automate and streamline invoices, fixed charges and tariffs processing. Revamped billing portal by refactoring legacy code, leveraging modern design and optimisation techniques for elevated user experience by enhancing product value, delivering intuitive, highly responsive portal tailored to target audience needs and complex business logic requirements.'}
@@ -44,9 +54,9 @@ export class HeaderComponent implements OnInit{
     }
     this.responsiveMenuVisible=false;
   }
-  
-  @HostListener('window:scroll', ['getScrollPosition($event)'])
-  getScrollPosition(event:any) {
-      this.pageYPosition=window.pageYOffset
-  }
+
+ // @HostListener('window:scroll', ['getScrollPosition($event)'])
+  //getScrollPosition(event:any) {
+   //   this.pageYPosition=window.pageYOffset
+  //}}
 }

@@ -12,6 +12,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from "primeng/card"; 
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {MatCardModule} from '@angular/material/card';
     CardModule,
     MatButtonModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
