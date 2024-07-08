@@ -2,20 +2,20 @@
     <div class="container">
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="menu-ul">
   <li [ngbNavItem]="1">
-    <a ngbNavLink (click)='scroll("about")' *ngFor="let text of data" class="section-title">{{text.AboutMe}}</a>
+    <a ngbNavLink (click)='scroll("about")'>
+        <span class='nav-number'>01. </span> <span class="underline nav-text"> {{'AboutMe'}}</span>
+        </a>
     <ng-template ngbNavContent>
-        <section class="section about" id="about">
-            <div class="about-title"  *ngFor="let text of data" data-aos="fade-up" data-aos-duration="3000">
-           {{text.AboutMeDescr2}}
-        </div>
-    </section>
+      <app-about-me></app-about-me>
   
 </ng-template>
     
   </li>
   
   <li [ngbNavItem]="2">
-    <button ngbNavLink>Experience</button>
+    <a ngbNavLink (click)='scroll("experience")'>
+        <span class='nav-number'>02. </span> <span class="underline nav-text"> {{'Experience'}}</span>
+        </a>
     <ng-template ngbNavContent styel="background: #0a192f;">
         <section >
             <div >
@@ -50,13 +50,17 @@
     </li>
   
     <li [ngbNavItem]="3">
-      <button ngbNavLink>Projects</button>
+        <a ngbNavLink (click)='scroll("projects")'>
+            <span class='nav-number'>03. </span> <span class="underline nav-text"> {{'Projects'}}</span>
+            </a>
       <ng-template ngbNavContent>
       </ng-template>
       </li>
   
       <li [ngbNavItem]="4"> 
-        <button ngbNavLink>Contact</button>
+        <a ngbNavLink (click)='scroll("contact")'>
+            <span class='nav-number'>04. </span> <span class="underline nav-text"> {{'Contact'}}</span>
+            </a>
         <ng-template ngbNavContent>
         </ng-template>
         </li>

@@ -55,8 +55,6 @@ export class HeaderComponent implements OnInit{
     this.responsiveMenuVisible=false;
   }
 
- // @HostListener('window:scroll', ['getScrollPosition($event)'])
-  //getScrollPosition(event:any) {
-   //   this.pageYPosition=window.pageYOffset
-  //}}
+
+
 }
