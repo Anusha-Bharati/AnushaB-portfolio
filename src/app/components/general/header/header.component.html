@@ -3,10 +3,11 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="menu-ul">
   <li [ngbNavItem]="1">
     <a ngbNavLink (click)='scroll("about")'>
-        <span class='nav-number'>01. </span> <span class="underline nav-text"> {{'AboutMe'}}</span>
-        </a>
-    <ng-template ngbNavContent>
+        <span class='nav-number'>01. </span> <span class="underline nav-text"> {{'AboutMe'}}</span> </a>
+    <ng-template class="section" ngbNavContent>
+ 
       <app-about-me></app-about-me>
+   
   
 </ng-template>
     
