@@ -14,29 +14,31 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './components/home/about-me/about-me.component';
+import { HomeModule } from './components/home/home.module';
+import { GeneralModule } from './components/general/general.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    AboutMeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    //AppRoutingModule,
     BrowserAnimationsModule,
-    RouterOutlet, 
-    RouterModule,
+    //RouterOutlet, 
+    //RouterModule,
     NgbNavModule,
     TimelineModule,
     CardModule,
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
+    HomeModule,
+    GeneralModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports:[HeaderComponent,FooterComponent]
+  exports:[]
 })
 export class AppModule { }
