@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit{
   url : string = '../assets/data.json';
   data: any ;
-  constructor(private httpClient: HttpClient){}
+  responsiveMenuVisible =false;
+
+  constructor(private httpClient: HttpClient,private router: Router){
+  }
   
   ngOnInit(): void {
     this.httpClient.get(this.url).subscribe(res => {
@@ -20,6 +24,18 @@ export class AppComponent implements OnInit{
     });
     
       AOS.init();
+  }
+  ScrollIntoView(elem: string) {
+    console.log(elem);
+    if(document.getElementById(elem)) {
+      document.getElementById(elem)?.scrollIntoView({behavior: 'smooth'});
+    //document.querySelector(elem)?.scrollIntoView({ behavior: 'smooth'});
+    }
+    this.responsiveMenuVisible=false;
+  }
+
+  downloadCV(){
+    window.open('/assets/cv.pdf', '_blank');
   }
 }
  

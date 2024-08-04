@@ -1,2 +1,22 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="navbar main-navbar on-top">
+    <span class="nav-link" (click)="ScrollIntoView('#zero')">AB</span>
+    <span class="nav-link" (click)="ScrollIntoView('#first')">About Me</span>
+    <span class="nav-link" (click)="ScrollIntoView('#second')">Experience</span>
+    <span class="nav-link" (click)="ScrollIntoView('#third')">Projects</span>
+    <span class="nav-link" (click)="ScrollIntoView('#fourth')"><a class="cv-btn" (click)="downloadCV()">Resume</a></span>
+  </div>
+  <div id="zero">
+    <app-banner></app-banner>
+  </div> 
+   <div id="first">
+    <app-about-me></app-about-me>
+  </div> 
+   <div id="second"> 
+    <app-experience></app-experience>
+  </div>
+  <div id="third">
+    
+  </div> 
+  <div id="fourth">
+    
+  </div> 

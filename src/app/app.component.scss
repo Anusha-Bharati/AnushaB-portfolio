@@ -1,0 +1,118 @@
+@import "./custom.scss";
+
+.main-navbar {
+    height: 70px;
+    background: $Navy;
+    font-family: $CodeFont;
+    justify-content: right;
+    .menu-ul{
+      li{
+        margin: 0px 13px;
+      }
+      // First and Last li has no margin
+      li:first-child{
+        margin-left: 0px;
+      }
+      li:last-child{
+        margin-right: 0px;
+      }
+
+    }}
+    .cv-btn{
+        padding: 20px 40px !important;
+      }
+      .nav-link {
+          padding: 20px 40px;
+          color: white;
+          margin: 0px;
+          font-size: 15px;
+          &:hover {
+              color: $Green;
+          }
+      }
+      .nav-number {
+          color: $Green;
+          font-size: 12px;
+      }
+      .nav-text{
+        color: $LightestSlate !important;
+        padding-bottom: 4px;
+      }
+      p{
+        margin-top: 100px;
+    margin-bottom: 1rem;
+    margin-right: 300px;
+    margin-left: 300px;
+      }
+
+          .about{
+
+            .about-description{
+                margin-top: 30px;
+                max-width: 480px;
+            }
+        
+            .about-img-container{
+                width: 324px;
+                margin: auto;
+        
+                &:after{
+                    content: '';
+                    border: 2px solid $Green;
+                    z-index: 0;
+                    display: block;
+                    position: relative;
+                    width: 394px;
+                    height: 305px;
+                    border-radius: 3px;
+                    bottom: 290px;
+                    left: 23px;
+        
+                }
+        
+                img{
+                    z-index: 2;
+                    position: relative;
+                }
+            }
+        
+            .skills-list{
+                display: grid;
+                grid-template-columns: repeat(2,minmax(140px,200px));
+                overflow: hidden;
+                padding: 0;
+                margin: 20px 0 0 0;
+                list-style: none;
+            }
+        
+            .skill-element{
+                position: relative;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                font-size: 13px;
+                font-family: $CodeFont;
+                color: $Green;
+                span{
+                  padding-bottom: 5px;
+                }
+        
+                &:before {
+                    content: '▹';
+                    position: absolute;
+                    left: 0;
+                    color: $Green;
+                    font-size: 14px;
+                    line-height: 12px;
+                }
+            }
+        
+        }
+        .mt-2 {
+             margin-top: .0rem !important; 
+        }
+        .underline {
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            color: #64ffda !important;
+          }

@@ -3,13 +3,13 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls:['./header.component.scss'] 
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  styleUrls:['./experience.component.scss'] 
 })
-export class HeaderComponent implements OnInit{
+export class ExperienceComponent implements OnInit{
   title = 'myPortfolio';
-  active = 0;
+  active = 1;
   experience : any[]=[];
   responsiveMenuVisible =false;
   pageYPosition: number;
@@ -42,9 +42,6 @@ export class HeaderComponent implements OnInit{
   ]
   }
   
-  downloadCV(){
-    window.open('/assets/cv.pdf', '_blank');
-  }
 
   scroll(el:any) {
     if(document.getElementById(el)) {
@@ -54,7 +51,7 @@ export class HeaderComponent implements OnInit{
     }
     this.responsiveMenuVisible=false;
   }
- 
+
 
 
 }

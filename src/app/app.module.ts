@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/general/header/header.component';
 import { FooterComponent } from './components/general/footer/footer.component';
@@ -14,28 +14,31 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './components/home/about-me/about-me.component';
-import { HomeModule } from './components/home/home.module';
-import { GeneralModule } from './components/general/general.module';
+import { BannerComponent } from './components/home/banner/banner.component';
+import { ExperienceComponent } from './components/home/experience/experience.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    AboutMeComponent,
+    BannerComponent,
+    ExperienceComponent,
+    
   ],
   imports: [
     BrowserModule,
-    //AppRoutingModule,
+  //  AppRoutingModule,
     BrowserAnimationsModule,
-    //RouterOutlet, 
-    //RouterModule,
+    RouterOutlet, 
+    RouterModule,
     NgbNavModule,
     TimelineModule,
     CardModule,
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    HomeModule,
-    GeneralModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],
