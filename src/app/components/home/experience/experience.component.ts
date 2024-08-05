@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
   styleUrls:['./experience.component.scss'] 
 })
 export class ExperienceComponent implements OnInit{
-  title = 'myPortfolio';
-  active = 1;
+
   experience : any[]=[];
   responsiveMenuVisible =false;
   pageYPosition: number;

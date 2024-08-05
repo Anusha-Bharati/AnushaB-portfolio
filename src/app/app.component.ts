@@ -14,7 +14,8 @@ export class AppComponent implements OnInit{
   data: any ;
   responsiveMenuVisible =false;
 
-  constructor(private httpClient: HttpClient,private router: Router){
+  constructor(private httpClient: HttpClient,
+    private router: Router){
   }
   
   ngOnInit(): void {
@@ -27,10 +28,7 @@ export class AppComponent implements OnInit{
   }
   ScrollIntoView(elem: string) {
     console.log(elem);
-    if(document.getElementById(elem)) {
-      document.getElementById(elem)?.scrollIntoView({behavior: 'smooth'});
-    //document.querySelector(elem)?.scrollIntoView({ behavior: 'smooth'});
-    }
+      document.querySelector(elem)?.scrollIntoView({behavior: 'smooth', block: 'start' });
     this.responsiveMenuVisible=false;
   }
 

@@ -1,9 +1,10 @@
-<div class="navbar main-navbar on-top">
+<div class="main-navbar on-top nav-shadow">
     <span class="nav-link" (click)="ScrollIntoView('#zero')">AB</span>
     <span class="nav-link" (click)="ScrollIntoView('#first')">About Me</span>
     <span class="nav-link" (click)="ScrollIntoView('#second')">Experience</span>
-    <span class="nav-link" (click)="ScrollIntoView('#third')">Projects</span>
-    <span class="nav-link" (click)="ScrollIntoView('#fourth')"><a class="cv-btn" (click)="downloadCV()">Resume</a></span>
+    <span class="nav-link" (click)="ScrollIntoView('#third')">Contact</span>
+   <!--  <span class="nav-link" (click)="ScrollIntoView('#third')">Projects</span> -->
+    <span class="nav-link" (click)="ScrollIntoView('#fourth')"><a class="cv-btn main-btn" (click)="downloadCV()">Resume</a></span>
   </div>
   <div id="zero">
     <app-banner></app-banner>
@@ -15,7 +16,7 @@
     <app-experience></app-experience>
   </div>
   <div id="third">
-    
+    <app-contact></app-contact>
   </div> 
   <div id="fourth">
     

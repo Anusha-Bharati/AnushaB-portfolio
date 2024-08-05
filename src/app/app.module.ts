@@ -16,6 +16,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './components/home/about-me/about-me.component';
 import { BannerComponent } from './components/home/banner/banner.component';
 import { ExperienceComponent } from './components/home/experience/experience.component';
+import { ContactComponent } from './components/home/contact/contact.component';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { ExperienceComponent } from './components/home/experience/experience.com
     AboutMeComponent,
     BannerComponent,
     ExperienceComponent,
-    
+    ContactComponent
   ],
   imports: [
     BrowserModule,
