@@ -9,24 +9,25 @@
 
     .about-img-container{
         width: 324px;
+        height: 530px;
         margin: auto;
 
         &:after{
             content: '';
             border: 2px solid $Green;
-            z-index: 0;
+            z-index: 1;
             display: block;
             position: relative;
-            width: 394px;
-            height: 305px;
+            width: 443px;
+            height: 520px;
             border-radius: 3px;
-            bottom: 290px;
-            left: 23px;
-
+            bottom: 500px;
+            right:23px;
         }
 
         img{
-            z-index: 2;
+            z-index: 0;
+            height: fit-content;
             position: relative;
         }
     }

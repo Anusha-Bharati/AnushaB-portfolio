@@ -10,14 +10,14 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from "primeng/card"; 
-import {MatButtonModule} from '@angular/material/button';
+import {MatButtonModule, MatIconButton} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AboutMeComponent } from './components/home/about-me/about-me.component';
 import { BannerComponent } from './components/home/banner/banner.component';
 import { ExperienceComponent } from './components/home/experience/experience.component';
 import { ContactComponent } from './components/home/contact/contact.component';
-
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,7 @@ import { ContactComponent } from './components/home/contact/contact.component';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],

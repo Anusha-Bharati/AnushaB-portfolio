@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./app/custom.scss";
+
 .card {
     background: var(--surface-card);
     padding: 2rem;
@@ -88,9 +89,9 @@ background: #0a192f;
   }
 
   .main-btn {
-    color: $Green;
+    color: white;
     background-color: transparent;
-    border: 1px solid $Green;
+    border: 1px solid white;;
     border-radius: 3px;
     font-size: 13px;
     font-family: $CodeFont;
