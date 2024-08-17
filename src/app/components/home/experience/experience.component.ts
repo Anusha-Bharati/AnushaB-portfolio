@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { GoogleAnalytics } from '../../../services/googleAnalytics.service';
 
 @Component({
   selector: 'app-experience',
@@ -16,12 +17,13 @@ export class ExperienceComponent implements OnInit{
   url : string = '../../../../assets/data.json';
 
   constructor( private router: Router,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private googleAnalytics: GoogleAnalytics
   ){
   }
 
   ngOnInit(){
-
+    this.googleAnalytics.sendGoogleAnalytics("click_Experience", "NavLink", "Experience");
     this.httpClient.get(this.url).subscribe(res => {
       this.data = res;
       console.log(this.data[0])

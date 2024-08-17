@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/general/header/header.component';
-import { FooterComponent } from './components/general/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,11 +14,12 @@ import { BannerComponent } from './components/home/banner/banner.component';
 import { ExperienceComponent } from './components/home/experience/experience.component';
 import { ContactComponent } from './components/home/contact/contact.component';
 import {MatIconModule} from '@angular/material/icon';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { GoogleAnalytics } from './services/googleAnalytics.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     AboutMeComponent,
     BannerComponent,
     ExperienceComponent,
@@ -40,7 +37,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    //GtagModule.forRoot({ trackingId: 'G-SFLLQME37G', trackPageviews: true })
+    NgxGoogleAnalyticsModule.forRoot('G-SFLLQME37G')
   ],
   providers: [],
   bootstrap: [AppComponent],
