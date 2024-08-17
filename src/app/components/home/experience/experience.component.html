@@ -21,7 +21,7 @@
             <ng-template pTemplate="content"  let-event data-aos="fade-up" data-aos-duration="1000">
                 <p-card  data-aos="fade-up" data-aos-duration="1000">
                     <div style="width:500px;">
-                    <h2 style="color:whitesmoke"> <span data-aos="fade-up" data-aos-duration="1000" style="color:#64ffda  !important;"> {{event.status}}</span> | <a href="{{event.link}}" class="underline" style="color:#64ffda  !important;"> {{event.name}} </a></h2>
+                    <h2 style="color:whitesmoke"> <span data-aos="fade-up" data-aos-duration="1000" style="color:#64ffda  !important;"> {{event.status}}</span> | <a (click)='googleAnalytics.sendGoogleAnalytics("click_Experiences", "Experience_Company", "Experiences")'  href="{{event.link}}" target='_blank' class="underline" style="color:#64ffda  !important;"> {{event.name}} </a></h2>
                     <span data-aos="fade-up" data-aos-duration="1000" style="color:#8892b0 !important; border-radius: 10px;;">{{event.descr}}</span> 
                         <br>
                       </div>

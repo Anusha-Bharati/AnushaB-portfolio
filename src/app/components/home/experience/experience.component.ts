@@ -18,7 +18,7 @@ export class ExperienceComponent implements OnInit{
 
   constructor( private router: Router,
     private httpClient: HttpClient,
-    private googleAnalytics: GoogleAnalytics
+    public googleAnalytics: GoogleAnalytics
   ){
   }
 
@@ -26,7 +26,6 @@ export class ExperienceComponent implements OnInit{
     this.googleAnalytics.sendGoogleAnalytics("click_Experience", "NavLink", "Experience");
     this.httpClient.get(this.url).subscribe(res => {
       this.data = res;
-      console.log(this.data[0])
     });
     this.experience = [
       {status: 'Software Developer', date: 'Dec 2022- Present', icon: 'AB', image:'eve.jpeg', name:'Eve Networks', link:'https://evenetworks.com/', button:'TypeScript',

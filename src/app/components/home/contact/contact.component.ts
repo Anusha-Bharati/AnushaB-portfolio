@@ -13,6 +13,5 @@ constructor(  public googleAnalytics: GoogleAnalytics){
 }
 ngOnInit():void{
 this.googleAnalytics.sendGoogleAnalytics("click_Contact", "NavLink", "Contact");
-console.log(this.googleAnalytics.sendGoogleAnalytics("click_Contact","NavLink","Contact"));
 }
 }
