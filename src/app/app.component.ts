@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
   }
 
   downloadCV(){
-    window.open('/assets/cv.pdf', '_blank');
+    window.open('assets/cv.pdf', '_blank');
   }
 
 
