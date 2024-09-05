@@ -28,7 +28,7 @@ export class ExperienceComponent implements OnInit{
       this.data = res;
     });
     this.experience = [
-      {status: 'Software Developer', date: 'Dec 2022- Present', icon: 'AB', image:'eve.jpeg', name:'Eve Networks', link:'https://evenetworks.com/', button:'TypeScript',
+      {status: 'Software Developer', date: 'Dec 2022- Present', icon: 'AB', image:'bnw.png', name:'Brave New World', link:'https://bravenewworld.co.uk/', button:'TypeScript',
         descr: 'Spearheaded development of billing portal, designed to automate and streamline invoices, fixed charges and tariffs processing. Used modern design for UI/UX which enhanced product value and resulted in the 40% product growth in the 1st quarter of 2024. Frontend tech stack: Angular 14, GraphQL, HTML, CSS, and Bootstrap. Backend tech stack: C#, GraphQL, ASP.NET Entity Framework, and SQL. Maintained system stability by providing prompt production support and resolving critical bugs. Utilised Git and Azure DevOps for version control and CI/CD, enabling efficient collaboration and streamlined software delivery processes. Adhered to Agile principles and methodologies, to ensure iterative and incremental project delivery.'}
     ,
     {status: 'Data Analyst', date: 'Nov 2021 - Oct 2022', icon: 'AB', image:'uob.png', name:'University of Bath', link: 'https://www.bath.ac.uk/',
