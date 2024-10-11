@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import AOS from 'aos';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
   url : string = '../assets/data.json';
   data: any ;
   responsiveMenuVisible =false;
-
+  pageYPosition: number;
   constructor(private httpClient: HttpClient,
   public googleAnalytics: GoogleAnalytics){
   }
@@ -32,6 +32,10 @@ export class AppComponent implements OnInit{
   downloadCV(){
     window.open('assets/cv.pdf', '_blank');
   }
+  @HostListener('window:scroll', ['getScrollPosition($event)'])
+    getScrollPosition(event:any) {
+        this.pageYPosition=window.pageYOffset
+    }
 
 
 }

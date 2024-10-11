@@ -1,17 +1,18 @@
-<section class="section about" id='experience'>
+<section class="section about" id='about'>
     <div class="container">
         <div class="section-box">
             <div class="about-title" data-aos="fade-up" data-aos-duration="500">
                 <h3 class="section-title" data-aos="fade-up" data-aos-duration="1000">
-                    <span style="color: #8892b0 !important; width: max-content;" class='n-section-title'>02. Experience</span> 
+                    <span style="color: #8892b0 !important;" class='n-section-title'>02. Experience</span> 
                 </h3>
+
             </div>
             <div class="row" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="about-description" data-aos="fade-up" data-aos-duration="1000">
        <p-timeline  [value]="experience" styleClass="customized-timeline" align="left" >
             <ng-template pTemplate="marker" let-event>
-                <span style="color:#8892b0 !important; width: max-content;" data-aos="fade-up" data-aos-duration="1000"
+                <span style="color:#8892b0 !important;" data-aos="fade-up" data-aos-duration="1000"
                     class="flex w-2rem h-2rem align-items-center justify-content-center text-white 
                     border-circle z-1 shadow-1 border-color: black;">
                  <span class="p-timeline-event-separator" data-aos="fade-up" data-aos-duration="1000" style="color:#8892b0 !important;"> {{event.date}}</span>
@@ -20,8 +21,12 @@
             </ng-template>
             <ng-template pTemplate="content"  let-event data-aos="fade-up" data-aos-duration="1000">
                 <p-card  data-aos="fade-up" data-aos-duration="1000">
-                    <div style="width:500px;">
-                    <h2 style="color:whitesmoke"> <span data-aos="fade-up" data-aos-duration="1000" style="color:#64ffda  !important;"> {{event.status}}</span> | <a (click)='googleAnalytics.sendGoogleAnalytics("click_Experiences", "Experience_Company", "Experiences")'  href="{{event.link}}" target='_blank' class="underline" style="color:#64ffda  !important;"> {{event.name}} </a></h2>
+                    <div>
+                    <h2 style="color:whitesmoke">
+                         <span data-aos="fade-up" data-aos-duration="1000" style="color:#64ffda  !important;"> {{event.status}}</span> 
+                         | <a (click)='googleAnalytics.sendGoogleAnalytics("click_Experiences", "Experience_Company", "Experiences")'  
+                         href="{{event.link}}" target='_blank' class="underline" style="color:#64ffda  !important;"> {{event.name}} </a>
+                    </h2>
                     <span data-aos="fade-up" data-aos-duration="1000" style="color:#8892b0 !important; border-radius: 10px;;">{{event.descr}}</span> 
                         <br>
                       </div>

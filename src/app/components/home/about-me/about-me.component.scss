@@ -9,7 +9,7 @@
 
     .about-img-container{
         width: 324px;
-        height: 530px;
+        height: 400px;
         margin: auto;
 
         &:after{
@@ -19,12 +19,12 @@
             display: block;
             position: relative;
             width: 430px;
-            height: 300px;
+            height: 430px;
             border-radius: 5px;
-            bottom: 287px;
             right: 15px;
+            bottom: 415px;
         }
-
+    
         img{
             z-index: 0;
             height: fit-content;
@@ -92,8 +92,9 @@
             width: 100%;
 
             img{
-                width: 180px;
-                height: 180px;
+                width: 350px;
+                height: 350px;
+                border: 2px solid $Green;
             }
 
             &:after {
