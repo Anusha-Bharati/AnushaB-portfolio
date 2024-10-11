@@ -39,7 +39,7 @@ import { GoogleAnalytics } from './services/googleAnalytics.service';
     HttpClientModule,
     MatIconModule,
     //GtagModule.forRoot({ trackingId: 'G-SFLLQME37G', trackPageviews: true })
-    NgxGoogleAnalyticsModule.forRoot('G-SFLLQME37G')
+   // NgxGoogleAnalyticsModule.forRoot('G-SFLLQME37G') 
   ],
   providers: [],
   bootstrap: [AppComponent],
